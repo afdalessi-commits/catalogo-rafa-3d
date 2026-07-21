@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#000817"/><circle cx="50" cy="40" r="18" fill="#0061f7"/><text x="50" y="80" font-size="14" fill="#fff" text-anchor="middle" font-family="sans-serif">Rafa 3D</text></svg></template>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; scroll-behavior: smooth; }
+    img { display: block; }
+  </style>
+  <script src="image-slot.js"></script>
+</helmet>
+
+<div style="width:1080px; margin:0 auto; background:#eceef2; background-image:radial-gradient(rgba(11,23,51,0.045) 1.2px, transparent 1.2px); background-size:24px 24px; font-family:'Manrope',sans-serif; color:#0e1626; overflow:hidden;">
+
+  <!-- ===================== HEADER ===================== -->
+  <div style="position:relative; background:#000817; overflow:hidden; padding:30px 40px 28px; min-height:508px; display:flex; align-items:stretch;">
+    <!-- foto do Rafa em plano de fundo -->
+    <div style="position:absolute; inset:0; background-image:url('assets/rafa_header.png'); background-size:cover; background-position:center 12%; pointer-events:none;"></div>
+    <!-- degradê navy: forte à esquerda (texto legível) → revela o Rafa à direita -->
+    <div style="position:absolute; inset:0; background:linear-gradient(95deg, #000817 0%, rgba(0,8,23,0.86) 22%, rgba(0,8,23,0.5) 42%, rgba(0,8,23,0.2) 60%, rgba(0,8,23,0) 80%); pointer-events:none;"></div>
+    <div style="position:absolute; inset:0; background:linear-gradient(0deg, rgba(0,8,23,0.5) 0%, rgba(0,8,23,0) 42%); pointer-events:none;"></div>
+
+
+    <div style="position:relative; display:flex; flex-direction:column; align-items:flex-start; justify-content:space-between; width:100%; max-width:620px;">
+      <!-- logo (não mexer) + slogan reescrito como texto vivo -->
+      <div style="display:flex; flex-direction:column; align-items:flex-start; gap:9px; flex:none;">
+        <img src="assets/logo_clean.png" alt="Rafa 3D Dalessi" style="width:196px; height:auto; display:block;">
+        <div style="text-align:left;">
+          <div style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:9.5px; letter-spacing:1.8px; color:#6fb0ff; text-shadow:0 0 11px rgba(0,97,247,0.6); white-space:nowrap;">TRANSFORMANDO IDEIAS EM REALIDADE</div>
+          <div style="display:flex; align-items:center; justify-content:flex-start; gap:9px; margin-top:5px;">
+            <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:11px; letter-spacing:2.6px; color:#ffffff; white-space:nowrap; text-shadow:0 0 9px rgba(0,97,247,0.45);">CAMADA POR CAMADA</span>
+            <span style="width:24px; height:1.5px; background:linear-gradient(90deg,#0061f7,transparent);"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- headline -->
+      <div style="min-width:0;">
+        <div style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:12px; letter-spacing:4px; color:#5fa0ff; margin-bottom:8px;">CATÁLOGO DE PRODUTOS</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:40px; line-height:1.02; color:#ffffff; letter-spacing:-0.5px; text-shadow:0 2px 12px rgba(0,8,23,0.7);">Crie<span style="color:#3d8bff;">.</span> Decore<span style="color:#3d8bff;">.</span> Presenteie<span style="color:#3d8bff;">.</span></div>
+        <div style="font-family:'Caveat',cursive; font-weight:700; font-size:34px; color:#5fa0ff; line-height:1; margin:2px 0 12px;">com criatividade!</div>
+        <div style="display:flex; align-items:center; gap:10px; color:#e9eef7; font-size:14px; line-height:1.4; max-width:400px; text-shadow:0 1px 3px rgba(0,8,23,0.95), 0 2px 12px rgba(0,8,23,0.8);">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#0061f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;"><path d="M6 9V3h12v6"/><rect x="6" y="14" width="12" height="7"/><path d="M6 18H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/></svg>
+          <span>Peças impressas em 3D com qualidade, estilo e feitas com carinho por <strong style="color:#ffffff;">Rafael Dalessi</strong></span>
+        </div>
+        <div style="display:flex; gap:10px; margin-top:15px;">
+          <span style="background:#0061f7; color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:13px; padding:8px 16px; border-radius:999px; box-shadow:0 4px 14px rgba(0,97,247,0.40); white-space:nowrap;">Modelos a partir de R$ 9,90</span>
+          <span style="border:1.5px solid rgba(255,255,255,0.28); color:#dbe5f5; font-weight:600; font-size:13px; padding:8px 16px; border-radius:999px; white-space:nowrap;">Escolha o modelo e a cor</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== BENEFITS BAR ===================== -->
+  <div style="background:#011a44; display:grid; grid-template-columns:repeat(4,1fr); padding:16px 40px;">
+    <div style="display:flex; align-items:center; gap:11px; color:#dfe7f5; font-size:13.5px; font-weight:600;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="#0061f7" stroke="none" style="flex:none;"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.49 4.04 3 5.5l7 7Z"/></svg>
+      <span>Peças leves<br>e resistentes</span>
+    </div>
+    <div style="display:flex; align-items:center; gap:11px; color:#dfe7f5; font-size:13.5px; font-weight:600;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0061f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;"><path d="M12 3l1.7 4.8L18 9.5l-4.3 1.7L12 16l-1.7-4.8L6 9.5l4.3-1.7z"/><path d="M19 14l.7 2 .8.6-.8.6-.7 2-.7-2-.8-.6.8-.6z"/></svg>
+      <span>Design<br>moderno</span>
+    </div>
+    <div style="display:flex; align-items:center; gap:11px; color:#dfe7f5; font-size:13.5px; font-weight:600;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0061f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9h14v-9"/></svg>
+      <span>Ideais para<br>qualquer ambiente</span>
+    </div>
+    <div style="display:flex; align-items:center; gap:11px; color:#dfe7f5; font-size:13.5px; font-weight:600;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0061f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v8h14v-8"/><path d="M12 8v12"/><path d="M12 8C12 8 10.5 3 8 4.5 6.5 5.4 7 8 12 8z"/><path d="M12 8C12 8 13.5 3 16 4.5c1.5.9 1 3.5-4 3.5z"/></svg>
+      <span>Ótimas para<br>presentear</span>
+    </div>
+  </div>
+
+  <!-- ===================== ÍNDICE DE CATEGORIAS ===================== -->
+  <div style="padding:26px 40px 0;">
+    <div style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:12px; letter-spacing:3.5px; color:#0061f7; margin-bottom:11px;">ÍNDICE DE CATEGORIAS</div>
+    <div style="display:flex; gap:9px; flex-wrap:wrap;">
+      <a href="#sec-vasos" style="text-decoration:none; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13px; color:#fff; background:#0061f7; padding:8px 16px; border-radius:999px; box-shadow:0 4px 12px rgba(0,97,247,0.30); cursor:pointer;">01 · Vasos &amp; Decoração</a>
+      <a href="#sec-brinquedos" style="text-decoration:none; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13px; color:#fff; background:#0061f7; padding:8px 16px; border-radius:999px; box-shadow:0 4px 12px rgba(0,97,247,0.30); cursor:pointer;">02 · Brinquedos &amp; Expositores</a>
+      <a href="#sec-portacards" style="text-decoration:none; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13px; color:#fff; background:#0061f7; padding:8px 16px; border-radius:999px; box-shadow:0 4px 12px rgba(0,97,247,0.30); cursor:pointer;">03 · Porta Cards</a>
+      <a href="#sec-suportes" style="text-decoration:none; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13px; color:#fff; background:#0061f7; padding:8px 16px; border-radius:999px; box-shadow:0 4px 12px rgba(0,97,247,0.30); cursor:pointer;">04 · Suportes &amp; Utilidades</a>
+      <a href="#sec-vinhos" style="text-decoration:none; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13px; color:#fff; background:#0061f7; padding:8px 16px; border-radius:999px; box-shadow:0 4px 12px rgba(0,97,247,0.30); cursor:pointer;">05 · Bar &amp; Vinhos</a>
+      <a href="#sec-chaveiros" style="text-decoration:none; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13px; color:#fff; background:#0061f7; padding:8px 16px; border-radius:999px; box-shadow:0 4px 12px rgba(0,97,247,0.30); cursor:pointer;">06 · Chaveiros</a>
+      <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13px; color:#8a94a6; background:#fff; border:1px solid #dde1e8; padding:8px 16px; border-radius:999px;">Personalizados <span style="color:#aeb6c4; font-weight:500;">· em breve</span></span>
+    </div>
+  </div>
+
+  <!-- ===================== SEÇÃO 01 · VASOS ===================== -->
+  <div id="sec-vasos" style="margin-top:24px; background:#000817; padding:22px 40px; display:flex; align-items:center; justify-content:space-between; position:relative; overflow:hidden;">
+    <div style="position:absolute; top:-90px; right:-60px; width:360px; height:240px; background:radial-gradient(circle, rgba(0,97,247,0.30), rgba(0,97,247,0) 65%); pointer-events:none;"></div>
+    <div style="position:relative; display:flex; align-items:center; gap:18px;">
+      <div style="width:54px; height:54px; border-radius:14px; background:#0061f7; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:22px; color:#fff; box-shadow:0 6px 16px rgba(0,97,247,0.45);">01</div>
+      <div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:28px; color:#fff; line-height:1; letter-spacing:-0.4px;">Vasos &amp; Decoração</div>
+        <div style="font-size:13px; color:#8ea0c0; margin-top:5px;">Vasos, cachepôs e peças decorativas</div>
+      </div>
+    </div>
+    <div style="position:relative; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13px; color:#cdd9ee; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.16); padding:7px 16px; border-radius:999px;">25 modelos</div>
+  </div>
+
+  <!-- grade de vasos -->
+  <div style="padding:22px 40px 8px;">
+    <div style="display:grid; grid-template-columns:{{ colsCss }}; gap:14px;">
+      <sc-for list="{{ products }}" as="p" hint-placeholder-count="0">
+        <div style="background:#ffffff; border:1px solid #e7e9ef; border-radius:16px; overflow:hidden; box-shadow:0 8px 20px rgba(11,23,51,0.09); display:flex; flex-direction:column;">
+          <div style="position:relative; width:100%; aspect-ratio:3/2; background:#eef0f3;">
+            <div role="img" aria-label="{{ p.name }}" style="position:absolute; inset:0; background-image:url('{{ p.img }}'); background-size:contain; background-repeat:no-repeat; background-position:center;"></div>
+            <sc-if value="{{ showNumbers }}" hint-placeholder-val="{{ true }}">
+              <div style="position:absolute; top:0; left:0; width:50px; height:50px; border-radius:0 0 15px 0; background:#0061f7; color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px; display:flex; align-items:center; justify-content:center; padding:0 8px 8px 0; box-shadow:2px 2px 7px rgba(0,0,0,0.28);">{{ p.n }}</div>
+            </sc-if>
+          </div>
+          <div style="padding:11px 13px 13px; display:flex; flex-direction:column; gap:7px; flex:1;">
+            <div style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14.5px; line-height:1.12; color:#0b1733; min-height:33px;">{{ p.name }}</div>
+            <div style="flex:1;"></div>
+            <sc-if value="{{ showHeights }}" hint-placeholder-val="{{ true }}">
+              <sc-if value="{{ p.hasH }}" hint-placeholder-val="{{ true }}">
+                <div style="font-size:12px; color:#7b879c; font-weight:500;">Altura: {{ p.h }}</div>
+              </sc-if>
+            </sc-if>
+            <sc-if value="{{ showPrices }}" hint-placeholder-val="{{ true }}">
+              <div style="display:flex; align-items:center; gap:7px;">
+                <span style="background:linear-gradient(135deg,#0a6bff,#0846d4); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:16px; padding:7px 14px; border-radius:9px; letter-spacing:0.2px; white-space:nowrap; box-shadow:0 4px 10px rgba(0,97,247,0.30);">{{ p.price }}</span>
+                <span style="font-size:11px; color:#13348f; font-weight:600; font-style:italic;">{{ p.per }}</span>
+              </div>
+              <sc-if value="{{ p.promo }}" hint-placeholder-val="{{ false }}">
+                <div style="margin-top:5px; font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; color:#13348f;">{{ p.promo }}</div>
+              </sc-if>
+            </sc-if>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- ===================== SEÇÃO 02 · BRINQUEDOS &amp; EXPOSITORES ===================== -->
+  <div id="sec-brinquedos" style="margin-top:18px; background:#000817; padding:22px 40px; display:flex; align-items:center; justify-content:space-between; position:relative; overflow:hidden;">
+    <div style="position:absolute; top:-90px; right:-60px; width:360px; height:240px; background:radial-gradient(circle, rgba(0,97,247,0.30), rgba(0,97,247,0) 65%); pointer-events:none;"></div>
+    <div style="position:relative; display:flex; align-items:center; gap:18px;">
+      <div style="width:54px; height:54px; border-radius:14px; background:#0061f7; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:22px; color:#fff; box-shadow:0 6px 16px rgba(0,97,247,0.45);">02</div>
+      <div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:28px; color:#fff; line-height:1; letter-spacing:-0.4px;">Brinquedos &amp; Expositores</div>
+        <div style="font-size:13px; color:#8ea0c0; margin-top:5px;">Carrinhos, fidgets e peças de coleção</div>
+      </div>
+    </div>
+    <div style="position:relative; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13px; color:#cdd9ee; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.16); padding:7px 16px; border-radius:999px;">{{ carsCount }} modelos</div>
+  </div>
+
+  <!-- grade de brinquedos -->
+  <div style="padding:22px 40px 8px;">
+    <div style="display:grid; grid-template-columns:{{ colsCss }}; gap:14px;">
+      <sc-for list="{{ cars }}" as="c" hint-placeholder-count="0">
+        <div style="background:#ffffff; border:1px solid #e7e9ef; border-radius:16px; overflow:hidden; box-shadow:0 8px 20px rgba(11,23,51,0.09); display:flex; flex-direction:column;">
+          <div style="position:relative; width:100%; aspect-ratio:3/2; background:#eef0f3;">
+            <div role="img" aria-label="{{ c.name }}" style="position:absolute; inset:0; background-image:url('{{ c.img }}'); background-size:contain; background-repeat:no-repeat; background-position:center;"></div>
+            <sc-if value="{{ showNumbers }}" hint-placeholder-val="{{ true }}">
+              <div style="position:absolute; top:0; left:0; width:50px; height:50px; border-radius:0 0 15px 0; background:#0061f7; color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px; display:flex; align-items:center; justify-content:center; padding:0 8px 8px 0; box-shadow:2px 2px 7px rgba(0,0,0,0.28);">{{ c.n }}</div>
+            </sc-if>
+          </div>
+          <div style="padding:11px 13px 13px; display:flex; flex-direction:column; gap:7px; flex:1;">
+            <div style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14.5px; line-height:1.12; color:#0b1733; min-height:33px;">{{ c.name }}</div>
+            <div style="flex:1;"></div>
+            <div style="display:inline-flex; align-self:flex-start; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:10.5px; letter-spacing:1px; text-transform:uppercase; color:#0061f7; background:#eaf1ff; padding:3px 9px; border-radius:999px;">{{ c.tipo }}</div>
+            <sc-if value="{{ showPrices }}" hint-placeholder-val="{{ true }}">
+              <div style="display:flex; align-items:center; gap:7px;">
+                <span style="background:linear-gradient(135deg,#0a6bff,#0846d4); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:16px; padding:7px 14px; border-radius:9px; letter-spacing:0.2px; white-space:nowrap; box-shadow:0 4px 10px rgba(0,97,247,0.30);">{{ c.price }}</span>
+                <span style="font-size:11px; color:#13348f; font-weight:600; font-style:italic;">{{ c.per }}</span>
+              </div>
+              <sc-if value="{{ c.nota }}" hint-placeholder-val="{{ false }}">
+                <div style="margin-top:5px; font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; color:#13348f;">{{ c.nota }}</div>
+              </sc-if>
+            </sc-if>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+      <!-- ===================== SEÇÃO 03 · PORTA CARDS ===================== -->
+  <div id="sec-portacards" style="margin-top:18px; background:#000817; padding:22px 40px; display:flex; align-items:center; justify-content:space-between; position:relative; overflow:hidden;">
+    <div style="position:absolute; top:-90px; right:-60px; width:360px; height:240px; background:radial-gradient(circle, rgba(0,97,247,0.30), rgba(0,97,247,0) 65%); pointer-events:none;"></div>
+    <div style="position:relative; display:flex; align-items:center; gap:18px;">
+      <div style="width:54px; height:54px; border-radius:14px; background:#0061f7; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:22px; color:#fff; box-shadow:0 6px 16px rgba(0,97,247,0.45);">03</div>
+      <div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:28px; color:#fff; line-height:1; letter-spacing:-0.4px;">Porta Cards</div>
+        <div style="font-size:13px; color:#8ea0c0; margin-top:5px;">Caixas e organizadores para coleções</div>
+      </div>
+    </div>
+    <div style="position:relative; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13px; color:#cdd9ee; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.16); padding:7px 16px; border-radius:999px;">{{ holdersCount }} modelos</div>
+  </div>
+
+  <!-- grade de porta cards -->
+  <div style="padding:22px 40px 8px;">
+    <div style="display:grid; grid-template-columns:{{ colsCss }}; gap:14px;">
+      <sc-for list="{{ holders }}" as="h" hint-placeholder-count="0">
+        <div style="background:#ffffff; border:1px solid #e7e9ef; border-radius:16px; overflow:hidden; box-shadow:0 8px 20px rgba(11,23,51,0.09); display:flex; flex-direction:column;">
+          <div style="position:relative; width:100%; aspect-ratio:3/2; background:#eef0f3;">
+            <div role="img" aria-label="{{ h.name }}" style="position:absolute; inset:0; background-image:url('{{ h.img }}'); background-size:contain; background-repeat:no-repeat; background-position:center;"></div>
+            <sc-if value="{{ showNumbers }}" hint-placeholder-val="{{ true }}">
+              <div style="position:absolute; top:0; left:0; width:50px; height:50px; border-radius:0 0 15px 0; background:#0061f7; color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px; display:flex; align-items:center; justify-content:center; padding:0 8px 8px 0; box-shadow:2px 2px 7px rgba(0,0,0,0.28);">{{ h.n }}</div>
+            </sc-if>
+          </div>
+          <div style="padding:11px 13px 13px; display:flex; flex-direction:column; gap:7px; flex:1;">
+            <div style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14.5px; line-height:1.12; color:#0b1733; min-height:33px;">{{ h.name }}</div>
+            <div style="flex:1;"></div>
+            <sc-if value="{{ showPrices }}" hint-placeholder-val="{{ true }}">
+              <div style="display:flex; align-items:center; gap:7px;">
+                <span style="background:linear-gradient(135deg,#0a6bff,#0846d4); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:16px; padding:7px 14px; border-radius:9px; letter-spacing:0.2px; white-space:nowrap; box-shadow:0 4px 10px rgba(0,97,247,0.30);">{{ h.price }}</span>
+                <span style="font-size:11px; color:#13348f; font-weight:600; font-style:italic;">{{ h.per }}</span>
+              </div>
+            </sc-if>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- ===================== SEÇÃO 04 · SUPORTES & UTILIDADES ===================== -->
+  <div id="sec-suportes" style="margin-top:18px; background:#000817; padding:22px 40px; display:flex; align-items:center; justify-content:space-between; position:relative; overflow:hidden;">
+    <div style="position:absolute; top:-90px; right:-60px; width:360px; height:240px; background:radial-gradient(circle, rgba(0,97,247,0.30), rgba(0,97,247,0) 65%); pointer-events:none;"></div>
+    <div style="position:relative; display:flex; align-items:center; gap:18px;">
+      <div style="width:54px; height:54px; border-radius:14px; background:#0061f7; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:22px; color:#fff; box-shadow:0 6px 16px rgba(0,97,247,0.45);">04</div>
+      <div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:28px; color:#fff; line-height:1; letter-spacing:-0.4px;">Suportes &amp; Utilidades</div>
+        <div style="font-size:13px; color:#8ea0c0; margin-top:5px;">Suportes, organizadores e itens práticos do dia a dia</div>
+      </div>
+    </div>
+    <div style="position:relative; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13px; color:#cdd9ee; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.16); padding:7px 16px; border-radius:999px;">{{ utilCount }} modelos</div>
+  </div>
+
+  <!-- grade de suportes/utilidades -->
+  <div style="padding:22px 40px 8px;">
+    <div style="display:grid; grid-template-columns:{{ colsCss }}; gap:14px;">
+      <sc-for list="{{ utils }}" as="u" hint-placeholder-count="0">
+        <div style="background:#ffffff; border:1px solid #e7e9ef; border-radius:16px; overflow:hidden; box-shadow:0 8px 20px rgba(11,23,51,0.09); display:flex; flex-direction:column;">
+          <div style="position:relative; width:100%; aspect-ratio:3/2; background:#eef0f3;">
+            <div role="img" aria-label="{{ u.name }}" style="position:absolute; inset:0; background-image:url('{{ u.img }}'); background-size:contain; background-repeat:no-repeat; background-position:center;"></div>
+            <sc-if value="{{ showNumbers }}" hint-placeholder-val="{{ true }}">
+              <div style="position:absolute; top:0; left:0; width:50px; height:50px; border-radius:0 0 15px 0; background:#0061f7; color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px; display:flex; align-items:center; justify-content:center; padding:0 8px 8px 0; box-shadow:2px 2px 7px rgba(0,0,0,0.28);">{{ u.n }}</div>
+            </sc-if>
+          </div>
+          <div style="padding:11px 13px 13px; display:flex; flex-direction:column; gap:7px; flex:1;">
+            <div style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14.5px; line-height:1.12; color:#0b1733; min-height:33px;">{{ u.name }}</div>
+            <div style="flex:1;"></div>
+            <sc-if value="{{ showPrices }}" hint-placeholder-val="{{ true }}">
+              <div style="display:flex; align-items:center; gap:7px;">
+                <span style="background:linear-gradient(135deg,#0a6bff,#0846d4); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:16px; padding:7px 14px; border-radius:9px; letter-spacing:0.2px; white-space:nowrap; box-shadow:0 4px 10px rgba(0,97,247,0.30);">{{ u.price }}</span>
+                <span style="font-size:11px; color:#13348f; font-weight:600; font-style:italic;">{{ u.per }}</span>
+              </div>
+            </sc-if>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- ===================== SEÇÃO 05 · BAR & VINHOS ===================== -->
+  <div id="sec-vinhos" style="margin-top:18px; background:#000817; padding:22px 40px; display:flex; align-items:center; justify-content:space-between; position:relative; overflow:hidden;">
+    <div style="position:absolute; top:-90px; right:-60px; width:360px; height:240px; background:radial-gradient(circle, rgba(0,97,247,0.30), rgba(0,97,247,0) 65%); pointer-events:none;"></div>
+    <div style="position:relative; display:flex; align-items:center; gap:18px;">
+      <div style="width:54px; height:54px; border-radius:14px; background:#0061f7; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:22px; color:#fff; box-shadow:0 6px 16px rgba(0,97,247,0.45);">05</div>
+      <div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:28px; color:#fff; line-height:1; letter-spacing:-0.4px;">Bar &amp; Vinhos</div>
+        <div style="font-size:13px; color:#8ea0c0; margin-top:5px;">Suportes e peças decorativas para vinho</div>
+      </div>
+    </div>
+    <div style="position:relative; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13px; color:#cdd9ee; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.16); padding:7px 16px; border-radius:999px;">{{ wineCount }} modelos</div>
+  </div>
+
+  <!-- grade de bar &amp; vinhos -->
+  <div style="padding:22px 40px 8px;">
+    <div style="display:grid; grid-template-columns:{{ colsCss }}; gap:14px;">
+      <sc-for list="{{ wines }}" as="w" hint-placeholder-count="0">
+        <div style="background:#ffffff; border:1px solid #e7e9ef; border-radius:16px; overflow:hidden; box-shadow:0 8px 20px rgba(11,23,51,0.09); display:flex; flex-direction:column;">
+          <div style="position:relative; width:100%; aspect-ratio:3/2; background:#eef0f3;">
+            <div role="img" aria-label="{{ w.name }}" style="position:absolute; inset:0; background-image:url('{{ w.img }}'); background-size:contain; background-repeat:no-repeat; background-position:center;"></div>
+            <sc-if value="{{ showNumbers }}" hint-placeholder-val="{{ true }}">
+              <div style="position:absolute; top:0; left:0; width:50px; height:50px; border-radius:0 0 15px 0; background:#0061f7; color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px; display:flex; align-items:center; justify-content:center; padding:0 8px 8px 0; box-shadow:2px 2px 7px rgba(0,0,0,0.28);">{{ w.n }}</div>
+            </sc-if>
+          </div>
+          <div style="padding:11px 13px 13px; display:flex; flex-direction:column; gap:7px; flex:1;">
+            <div style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14.5px; line-height:1.12; color:#0b1733; min-height:33px;">{{ w.name }}</div>
+            <div style="flex:1;"></div>
+            <sc-if value="{{ showPrices }}" hint-placeholder-val="{{ true }}">
+              <div style="display:flex; align-items:center; gap:7px;">
+                <span style="background:linear-gradient(135deg,#0a6bff,#0846d4); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:16px; padding:7px 14px; border-radius:9px; letter-spacing:0.2px; white-space:nowrap; box-shadow:0 4px 10px rgba(0,97,247,0.30);">{{ w.price }}</span>
+                <span style="font-size:11px; color:#13348f; font-weight:600; font-style:italic;">{{ w.per }}</span>
+              </div>
+            </sc-if>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- ===================== SEÇÃO 06 · CHAVEIROS ===================== -->
+  <div id="sec-chaveiros" style="margin-top:18px; background:#000817; padding:22px 40px; display:flex; align-items:center; justify-content:space-between; position:relative; overflow:hidden;">
+    <div style="position:absolute; top:-90px; right:-60px; width:360px; height:240px; background:radial-gradient(circle, rgba(0,97,247,0.30), rgba(0,97,247,0) 65%); pointer-events:none;"></div>
+    <div style="position:relative; display:flex; align-items:center; gap:18px;">
+      <div style="width:54px; height:54px; border-radius:14px; background:#0061f7; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:22px; color:#fff; box-shadow:0 6px 16px rgba(0,97,247,0.45);">06</div>
+      <div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:28px; color:#fff; line-height:1; letter-spacing:-0.4px;">Chaveiros</div>
+        <div style="font-size:13px; color:#8ea0c0; margin-top:5px;">Chaveiros fofos e divertidos</div>
+      </div>
+    </div>
+    <div style="position:relative; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13px; color:#cdd9ee; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.16); padding:7px 16px; border-radius:999px;">{{ keychainCount }} modelos</div>
+  </div>
+
+  <!-- grade de chaveiros -->
+  <div style="padding:22px 40px 8px;">
+    <div style="display:grid; grid-template-columns:{{ colsCss }}; gap:14px;">
+      <sc-for list="{{ keychains }}" as="k" hint-placeholder-count="0">
+        <div style="background:#ffffff; border:1px solid #e7e9ef; border-radius:16px; overflow:hidden; box-shadow:0 8px 20px rgba(11,23,51,0.09); display:flex; flex-direction:column;">
+          <div style="position:relative; width:100%; aspect-ratio:3/2; background:#eef0f3;">
+            <div role="img" aria-label="{{ k.name }}" style="position:absolute; inset:0; background-image:url('{{ k.img }}'); background-size:contain; background-repeat:no-repeat; background-position:center;"></div>
+            <sc-if value="{{ showNumbers }}" hint-placeholder-val="{{ true }}">
+              <div style="position:absolute; top:0; left:0; width:50px; height:50px; border-radius:0 0 15px 0; background:#0061f7; color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px; display:flex; align-items:center; justify-content:center; padding:0 8px 8px 0; box-shadow:2px 2px 7px rgba(0,0,0,0.28);">{{ k.n }}</div>
+            </sc-if>
+          </div>
+          <div style="padding:11px 13px 13px; display:flex; flex-direction:column; gap:7px; flex:1;">
+            <div style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14.5px; line-height:1.12; color:#0b1733; min-height:33px;">{{ k.name }}</div>
+            <div style="flex:1;"></div>
+            <sc-if value="{{ showPrices }}" hint-placeholder-val="{{ true }}">
+              <div style="display:flex; align-items:center; gap:7px;">
+                <span style="background:linear-gradient(135deg,#0a6bff,#0846d4); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:16px; padding:7px 14px; border-radius:9px; letter-spacing:0.2px; white-space:nowrap; box-shadow:0 4px 10px rgba(0,97,247,0.30);">{{ k.price }}</span>
+                <span style="font-size:11px; color:#13348f; font-weight:600; font-style:italic;">{{ k.per }}</span>
+              </div>
+            </sc-if>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+  <div style="margin:24px 40px 4px; background:linear-gradient(120deg,#0061f7 0%,#0a37cf 100%); border-radius:18px; padding:23px 28px; display:flex; align-items:center; gap:22px; box-shadow:0 14px 32px rgba(0,97,247,0.32); position:relative; overflow:hidden;">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none;"><path d="M16 3H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/><path d="M9 8h6"/><path d="M9 12h6"/><path d="M9 16h4"/></svg>
+    <div style="flex:1; min-width:0;">
+      <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:19px; color:#ffffff; line-height:1.15;">Escolha o número do modelo e a cor do filamento</div>
+      <div style="font-size:13.5px; color:rgba(255,255,255,0.88); margin-top:5px; line-height:1.4;">Também fazemos <strong style="color:#ffffff;">utilidades, chaveiros e peças personalizadas</strong> sob encomenda. Não encontrou o que imaginou? Fale com a gente!</div>
+    </div>
+    <div style="font-family:'Caveat',cursive; font-weight:700; font-size:26px; color:#d6e4ff; line-height:1.05; text-align:right; flex:none; max-width:190px;">Teremos o maior prazer em fazer seu orçamento!</div>
+  </div>
+
+  <!-- ===================== FILAMENTS ===================== -->
+  <div style="padding:26px 40px 30px;">
+    <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
+      <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:18px; letter-spacing:0.5px; color:#0b1733;">CORES DE FILAMENTO DISPONÍVEIS</div>
+      <div style="flex:1; height:1px; background:linear-gradient(90deg,#cfd4dd,transparent);"></div>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(10,1fr); gap:14px 10px;">
+      <sc-for list="{{ filaments }}" as="f" hint-placeholder-count="19">
+        <div style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:7px;">
+          <div style="width:46px; height:46px; border-radius:50%; background:{{ f.bg }}; box-shadow:inset 0 0 0 1px rgba(0,0,0,0.10), 0 2px 5px rgba(11,23,51,0.12);"></div>
+          <div style="font-size:10.5px; line-height:1.15; color:#41506a; font-weight:600;">{{ f.name }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- ===================== FOOTER ===================== -->
+  <div style="background:#000817; position:relative; overflow:hidden; padding:26px 40px 0;">
+    <div style="position:absolute; top:-100px; left:-60px; width:420px; height:300px; background:radial-gradient(circle, rgba(0,97,247,0.22), rgba(0,97,247,0) 65%); pointer-events:none;"></div>
+    <div style="position:relative; display:grid; grid-template-columns:1fr 1fr; gap:24px; padding-bottom:24px;">
+      <!-- whatsapp -->
+      <div style="display:flex; align-items:center; gap:16px;">
+        <div style="width:54px; height:54px; border-radius:14px; background:#0061f7; display:flex; align-items:center; justify-content:center; flex:none;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L16 13l5 2v4a2 2 0 0 1-2.18 2A16 16 0 0 1 3 5.18 2 2 0 0 1 5 4z"/></svg>
+        </div>
+        <div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:12px; letter-spacing:2px; color:#5fa0ff;">FAÇA SEU PEDIDO · WHATSAPP</div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:26px; color:#fff; letter-spacing:0.3px;">(11) 98719-0466</div>
+        </div>
+      </div>
+      <!-- pix -->
+      <div style="display:flex; align-items:center; gap:16px;">
+        <div style="width:54px; height:54px; border-radius:14px; background:#0061f7; display:flex; align-items:center; justify-content:center; flex:none;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 20.5 12 12 20.5 3.5 12z"/><path d="M8.5 8.5 12 12l-3.5 3.5"/></svg>
+        </div>
+        <div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:12px; letter-spacing:2px; color:#5fa0ff;">PAGAMENTO VIA PIX</div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:22px; color:#fff; letter-spacing:0.2px; display:flex; align-items:baseline;"><span>dalessi.rafa</span><span>&#64;</span><span>gmail</span><span>.com</span></div>
+        </div>
+      </div>
+    </div>
+    <div style="position:relative; border-top:1px solid rgba(255,255,255,0.10); padding:13px 0; display:flex; align-items:center; justify-content:center; gap:12px; color:#8ea0c0; font-size:12.5px;">
+      <span>Feito com dedicação por <strong style="color:#cdd9ee;">Rafael Dalessi</strong></span>
+      <span style="color:#0061f7;">●</span>
+      <span style="font-family:'Caveat',cursive; font-size:18px; color:#9fb4d8;">Impressões que decoram, encantam e criam memórias!</span>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;$preview&quot;: { &quot;width&quot;: 1080, &quot;height&quot;: 1720 },
+  &quot;showPrices&quot;:  { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot; },
+  &quot;showHeights&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot; },
+  &quot;showNumbers&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot; },
+  &quot;columns&quot;:     { &quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;5&quot;,&quot;4&quot;,&quot;3&quot;], &quot;default&quot;: &quot;5&quot;, &quot;tsType&quot;: &quot;string&quot; }
+}">
+class Component extends DCLogic {
+  renderVals() {
+    const products = [
+      { n:1,  name:"Vaso Bloom",                     h:"18 cm", price:"R$ 47,90", per:"" },
+      { n:2,  name:"Vaso Torcido de Folha",          h:"18 cm", price:"R$ 47,90", per:"" },
+      { n:3,  name:"Vaso de Parede (Cálice)",        h:"13 cm", price:"R$ 49,90", per:"cada" },
+      { n:4,  name:"Serenora Spiral Vase (Elegante)",h:"20 cm", price:"R$ 54,90", per:"" },
+      { n:5,  name:"Laço Quadrado (Vaso Canelado)",  h:"18 cm", price:"R$ 91,90", per:"" },
+      { n:6,  name:"Vaso Decorativo (Duplo)",        h:"20 cm", price:"R$ 79,90", per:"" },
+      { n:7,  name:"Vaso Torcido em Espiral (Cobre)",h:"20 cm", price:"R$ 49,90", per:"" },
+      { n:8,  name:"Jarro Beija-flor Decorativo",    h:"18 cm", price:"R$ 84,90", per:"" },
+      { n:9,  name:"Vaso de Folha",                  h:"20 cm", price:"R$ 47,90", per:"cada" },
+      { n:10, name:"Miniatura de Tartaruga (Vaso)",  h:"10 cm", price:"R$ 89,90", per:"" },
+      { n:11, name:"Vaso de Flores (Ondulado)",      h:"18 cm", price:"R$ 44,90", per:"" },
+      { n:12, name:"Vaso Octogonal Espiralado",      h:"20 cm", price:"R$ 47,90", per:"" },
+      { n:13, name:"Vaso Pinhas (Pine Cone)",        h:"18 cm", price:"R$ 47,90", per:"cada" },
+      { n:14, name:"Vaso Vórtice (Decoração Office)",h:"18 cm", price:"R$ 44,90", per:"" },
+      { n:15, name:"Vaso com Folhas Decorativas",    h:"20 cm", price:"R$ 52,90", per:"" },
+      { n:16, name:"Vaso IKEA Fejka (Encaixe)",      h:"",      price:"R$ 42,90", per:"" },
+      { n:17, name:"Vaso de Planta Dachshund",       h:"",      price:"R$ 49,90", per:"" },
+      { n:18, name:"Vaso Filo — Elegância Moderna",  h:"",      price:"R$ 47,90", per:"" },
+      { n:19, name:"Vaso Kairos Flux (Jarra)",       h:"",      price:"R$ 46,90", per:"" },
+      { n:20, name:"Vaso Design Moderno",            h:"",      price:"R$ 47,90", per:"" },
+      { n:21, name:"Vaso Espiral",                   h:"",      price:"R$ 39,90", per:"" },
+      { n:22, name:"Plantador Ninho",                            h:"",      price:"R$ 59,90", per:"cada", promo:"3 por R$ 149,90" },
+      { n:23, name:"Suporte de Planta Parede Minimalista",       h:"",      price:"R$ 46,90", per:"" },
+      { n:24, name:"Vaso de Decoração Ousada",                   h:"20 cm", price:"R$ 69,90", per:"" },
+      { n:25, name:"Vaso Moderno em Espirais",                   h:"15 cm", price:"R$ 54,90", per:"" },
+      { n:26, name:"Bandeja Decorativa em Formato de Folha",     h:"",      price:"R$ 32,90", per:"" },
+    ].map(p => ({ ...p, img: "assets/p" + p.n + ".png", hasH: !!p.h }));
+
+    const gloss = (c) => "radial-gradient(circle at 33% 27%, rgba(255,255,255,0.55), rgba(255,255,255,0) 42%), " + c;
+    const filaments = [
+      { name:"Azul Escuro Brilhante", bg: gloss("#0a2a8c") },
+      { name:"Azul Escuro Fosco",     bg: "#2a3d6e" },
+      { name:"Preto Brilhante",       bg: gloss("#0d0d12") },
+      { name:"Preto Fosco",           bg: "#1c1c1f" },
+      { name:"Rosa Pink Brilhante",   bg: gloss("#ca1c87") },
+      { name:"Amarelo Ouro",          bg: gloss("#f3b50a") },
+      { name:"Dourado",               bg: "linear-gradient(135deg,#efd793,#c79f33 48%,#8a6a1e)" },
+      { name:"Roxo",                  bg: gloss("#5b2a86") },
+      { name:"Branco",               bg: gloss("#f3f3f3") },
+      { name:"Metal Bronze",         bg: "linear-gradient(135deg,#dcb78b,#9a7340 48%,#5e4220)" },
+      { name:"Laranja",              bg: gloss("#e8631b") },
+      { name:"Verde Brilhante",      bg: gloss("#139140") },
+      { name:"Vermelho Marsala",     bg: "#6e1a26" },
+      { name:"Branco Marmorizado",   bg: "linear-gradient(135deg,#ffffff,#e4e4e8 38%,#c7c7cf 58%,#fbfbfc)" },
+      { name:"Verde Escuro",         bg: "#123e22" },
+      { name:"Vermelho",             bg: gloss("#cf2026") },
+      { name:"Preto Perolado Metalizado", bg: "linear-gradient(135deg,#454552,#16161e 62%)" },
+      { name:"Caucasiano (Cor da Pele)",  bg: gloss("#d9a878") },
+      { name:"Marrom",               bg: "#4a2d1a" },
+    ];
+
+    const cars = [
+      { n:1, name:"Carro AE86 Divertido", tipo:"Brinquedo", price:"R$ 64,90", per:"" },
+      { n:2, name:"Edição Futurista",     tipo:"Expositor", price:"R$ 39,90", per:"" },
+      { n:3, name:"Fidget Cube",          tipo:"Brinquedo", price:"R$ 14,90", per:"" },
+      { n:4, name:"Conjunto Impossível de Passagem", tipo:"Brinquedo", price:"R$ 9,90", per:"cada", nota:"escolha a letra" },
+      { n:5, name:"Katana Retrátil",      tipo:"Brinquedo", price:"R$ 34,90", per:"" },
+      { n:6, name:"Sapo Saltador",        tipo:"Brinquedo", price:"R$ 9,90",  per:"cada" },
+      { n:7, name:"Cubo Infinito",        tipo:"Brinquedo", price:"R$ 19,90", per:"cada" },
+      { n:8, name:"Cone Espiral Fidget",  tipo:"Brinquedo", price:"R$ 19,90", per:"" },
+      { n:9, name:"Estrela Sensorial",    tipo:"Brinquedo", price:"R$ 14,90", per:"" },
+      { n:10, name:"Jogo da Forca",       tipo:"Brinquedo", price:"R$ 14,90", per:"" },
+      { n:11, name:"Pião Mágico Ilusório", tipo:"Brinquedo", price:"R$ 9,90", per:"" },
+      { n:12, name:"Polvo Articulado",    tipo:"Brinquedo", price:"R$ 22,90", per:"cada" },
+      { n:13, name:"Disco de Mesa",       tipo:"Brinquedo", price:"R$ 39,90", per:"" },
+      { n:14, name:"Spinner e Mini Lançador", tipo:"Brinquedo", price:"R$ 39,90", per:"" },
+      { n:15, name:"Foguete de Pressão de Ar", tipo:"Brinquedo", price:"R$ 64,90", per:"" },
+      { n:16, name:"Jogo da Velha",       tipo:"Brinquedo", price:"R$ 9,90",  per:"" },
+      { n:17, name:"Suporte de Copos Articulado de Tartaruga", tipo:"Expositor", price:"R$ 59,90", per:"" },
+      { n:18, name:"Suporte de Aranha para Alexa", tipo:"Expositor", price:"R$ 29,90", per:"" },
+      { n:19, name:"Árvore do Amor",       tipo:"Expositor", price:"R$ 14,90", per:"" },
+      { n:20, name:"Expositor Home",       tipo:"Expositor", price:"R$ 14,90", per:"" },
+    ].map(c => ({ ...c, img: "assets/car" + c.n + ".png" }));
+
+    const holders = [
+      { n:1, name:"Porta Card Pokémon (Branco e Vermelho)", price:"R$ 49,90", per:"", img:"assets/holder2.png" },
+      { n:2, name:"Porta Card Pokémon (Dourado, Vermelho e Branco)", price:"R$ 89,90", per:"", img:"assets/holder3.png" },
+      { n:3, name:"Porta Card Pokémon (50 a 125 figurinhas)", price:"R$ 44,90", per:"", img:"assets/holder7.png" },
+      { n:4, name:"Porta Card Pokémon (Formato Pokébola Quadrada)", price:"R$ 49,90", per:"cada", img:"assets/holder8.png" },
+      { n:5, name:"Porta Card Pokémon Gaole", price:"R$ 79,90", per:"", img:"assets/holder9.png" },
+      { n:6, name:"Porta Pokémon Grande (200 ou mais figurinhas)", price:"R$ 19,90", per:"", img:"assets/holder10.png" },
+      { n:7, name:"Porta Card Pokémon Magro", price:"R$ 39,90", per:"", img:"assets/holder11.png" },
+      { n:8, name:"Porta Card Pokémon com Trava", price:"R$ 39,90", per:"", img:"assets/holder12.png" },
+      { n:9, name:"Porta Card Pokémon Clássico", price:"R$ 69,90", per:"", img:"assets/holder13.png" },
+    ];
+
+    const utils = [
+      { n:1, name:"Suporte Parafone e Controle de Videogame (PS5)", price:"R$ 24,90", per:"", img:"assets/util1.png" },
+      { n:2, name:"Suporte para Fone de Ouvido e Controle", price:"R$ 64,90", per:"", img:"assets/util2.png" },
+      { n:3, name:"Suporte Alexa Greifer", price:"R$ 19,90", per:"", img:"assets/util3.png" },
+      { n:4, name:"Suporte de Parede para Alexa", price:"R$ 14,90", per:"", img:"assets/util4.png" },
+      { n:5, name:"Suporte de Escova de Dentes (Formato de Dente)", price:"R$ 24,90", per:"", img:"assets/util5.png" },
+      { n:6, name:"Suporte para Papel Higiênico", price:"R$ 59,90", per:"", img:"assets/util6.png" },
+      { n:7, name:"Suporte de Gato para Alexa", price:"R$ 124,90", per:"", img:"assets/util7.png" },
+      { n:8, name:"Suporte para Carregador", price:"R$ 9,90", per:"", img:"assets/util8.png" },
+      { n:9, name:"Caixa Organizadora de Controle Remoto com Laço", price:"R$ 74,90", per:"", img:"assets/util9.png" },
+      { n:10, name:"Organizador de Controle Remoto", price:"R$ 74,90", per:"", img:"assets/util10.png" },
+      { n:11, name:"Organizador de Controle Remoto II", price:"R$ 44,90", per:"", img:"assets/util11.png" },
+      { n:12, name:"Organizador de Controle Remoto III", price:"R$ 39,90", per:"", img:"assets/util12.png" },
+      { n:13, name:"Organizador de Controle Remoto IV", price:"R$ 99,90", per:"", img:"assets/util13.png" },
+      { n:14, name:"Suporte de Canecas", price:"R$ 79,90", per:"", img:"assets/util15.png" },
+      { n:15, name:"Suporte de Garrafas de Geladeira (Par, para 2 garrafas)", price:"R$ 19,90", per:"", img:"assets/util16.png" },
+      { n:16, name:"Gancho de Parede Resistente", price:"R$ 19,90", per:"", img:"assets/util17.png" },
+      { n:17, name:"Cine-Companion", price:"R$ 84,90", per:"", img:"assets/util18.png" },
+      { n:18, name:"Descanso de Utensílios Minimalista", price:"R$ 19,90", per:"", img:"assets/util19.png" },
+      { n:19, name:"Porta Esponja (Somente o Suporte)", price:"R$ 64,90", per:"", img:"assets/util20.png" },
+      { n:20, name:"Dispensador de Ovos", price:"R$ 79,90", per:"", img:"assets/util21.png" },
+      { n:21, name:"Grampo em G", price:"R$ 24,90", per:"cada", img:"assets/util22.png" },
+      { n:22, name:"Transportador de Sacola de Supermercado", price:"R$ 19,90", per:"", img:"assets/util23.png" },
+      { n:23, name:"Prateleira de Parede para Livros Inclinada (Par)", price:"R$ 59,90", per:"", img:"assets/util24.png" },
+      { n:24, name:"Lavador Inteligente de Frutas e Legumes (HydroBowl)", price:"R$ 134,90", per:"", img:"assets/util25.png" },
+    ];
+    const utilCount = utils.length;
+
+    const wines = [
+      { n:1, name:"Suporte de Lagartixa para Vinho", price:"R$ 29,90", per:"", img:"assets/car21.png" },
+      { n:2, name:"Suporte de Gato para Vinho", price:"R$ 34,90", per:"", img:"assets/car22.png" },
+      { n:3, name:"Suporte de Vinhos", price:"R$ 89,90", per:"", img:"assets/wine3.png" },
+      { n:4, name:"Suporte de Coelho para Vinho", price:"R$ 99,90", per:"", img:"assets/wine4.png" },
+      { n:5, name:"Suporte de Vinho em Formato de Chama", price:"R$ 64,90", per:"", img:"assets/wine5.png" },
+      { n:6, name:"Suporte para Vinhos", price:"R$ 139,90", per:"", img:"assets/wine6.png" },
+      { n:7, name:"Porta Latas Monster", price:"R$ 64,90", per:"", img:"assets/util14.png" },
+      { n:8, name:"Suporte de Lata I", price:"R$ 64,90", per:"", img:"assets/wine8.png" },
+      { n:9, name:"Suporte de Cavalo para Vinho", price:"R$ 119,90", per:"", img:"assets/wine9.png" },
+    ];
+    const wineCount = wines.length;
+
+    const keychains = [
+      { n:1, name:"Chaveiro de Porquinho", price:"R$ 27,90", per:"", img:"assets/key1.png" },
+      { n:2, name:"Chaveiro de Coelhinho", price:"R$ 27,90", per:"", img:"assets/key2.png" },
+      { n:3, name:"Chaveiro de Patinho (com ou sem perninha)", price:"R$ 29,90", per:"", img:"assets/key3.png" },
+      { n:4, name:"Chaveiro de Ovelhinha", price:"R$ 27,90", per:"", img:"assets/key4.png" },
+      { n:5, name:"Chaveiro de Sapinho", price:"R$ 27,90", per:"", img:"assets/key5.png" },
+      { n:6, name:"Chaveiro de Caranguejinho", price:"R$ 24,90", per:"", img:"assets/key6.png" },
+      { n:7, name:"Chaveiro de Dinossaurinho", price:"R$ 24,90", per:"", img:"assets/key7.png" },
+      { n:8, name:"Chaveiro de Raposinha", price:"R$ 29,90", per:"", img:"assets/key8.png" },
+      { n:9, name:"Chaveiro de Axolote", price:"R$ 27,90", per:"", img:"assets/key9.png" },
+      { n:10, name:"Chaveiro de Jacaré", price:"R$ 27,90", per:"cada", img:"assets/key10.png" },
+      { n:11, name:"Chaveiro de Tartaruga", price:"R$ 32,90", per:"cada", img:"assets/key11.png" },
+      { n:12, name:"Chaveiro de Cavalinho", price:"R$ 24,90", per:"cada", img:"assets/key12.png" },
+      { n:13, name:"Chaveiro de Lobinho", price:"R$ 32,90", per:"cada", img:"assets/key13.png" },
+      { n:14, name:"Chaveiro de Orca", price:"R$ 27,90", per:"cada", img:"assets/key14.png" },
+      { n:15, name:"Chaveiro de Crocodilo", price:"R$ 24,90", per:"", img:"assets/key15.png" },
+    ];
+    const keychainCount = keychains.length;
+
+    const cols = parseInt(this.props.columns ?? "5", 10) || 5;
+
+    return {
+      products,
+      cars,
+      carsCount: cars.length,
+      holders,
+      holdersCount: holders.length,
+      utils,
+      utilCount,
+      wines,
+      wineCount,
+      keychains,
+      keychainCount,
+      filaments,
+      colsCss: "repeat(" + cols + ", minmax(0,1fr))",
+      showPrices:  this.props.showPrices  ?? true,
+      showHeights: this.props.showHeights ?? true,
+      showNumbers: this.props.showNumbers ?? true,
+    };
+  }
+}
+</script>
+</body>
+</html>
