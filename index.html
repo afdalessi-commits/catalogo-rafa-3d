@@ -526,7 +526,7 @@ class Component extends DCLogic {
       const key = item.name;
       const priceNum = this.parsePrice(item.price);
       const existing = cart[key];
-      cart[key] = { name: item.name, price: item.price, priceNum, qty: (existing ? existing.qty : 0) + 1 };
+      cart[key] = { name: item.name, code: item.code, price: item.price, priceNum, qty: (existing ? existing.qty : 0) + 1 };
       return { cart, cartOpen: true };
     });
   }
@@ -699,12 +699,17 @@ class Component extends DCLogic {
     const keychainCount = keychains.length;
 
     const FORM_BASE = "https://docs.google.com/forms/d/e/1FAIpQLSdxdpmc0IhRFkgv_bpykD2llUt2isEQxos09S-Nu8Xce-5Svw/viewform?usp=pp_url";
-    const buildOrderUrl = (name, price) => FORM_BASE + "&entry.2026367921=" + encodeURIComponent(name + " - " + price);
+    const buildOrderUrl = (code, name, qty, price) => FORM_BASE +
+      "&entry.2026367921=" + encodeURIComponent(code ? (code + " - " + name) : name) +
+      "&entry.1623072553=" + encodeURIComponent(qty) +
+      "&entry.307128654=" + encodeURIComponent(price);
     const WA_NUMBER = "5511987190466";
-    const buildWaUrl = (name, price) => "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Olá! Tenho interesse no item: " + name + " (" + price + "). Pode me passar mais detalhes?");
-    [products, cars, holders, utils, wines, keychains].forEach(list => list.forEach(item => {
-      item.orderUrl = buildOrderUrl(item.name, item.price);
-      item.waUrl = buildWaUrl(item.name, item.price);
+    const buildWaUrl = (code, name, price) => "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Olá! Tenho interesse no item: " + code + " - " + name + " (" + price + "). Pode me passar mais detalhes?");
+    const sectionCodes = [["01", products], ["02", cars], ["03", holders], ["04", utils], ["05", wines], ["06", keychains]];
+    sectionCodes.forEach(([sec, list]) => list.forEach((item, idx) => {
+      item.code = sec + "." + String(idx + 1).padStart(2, '0');
+      item.orderUrl = buildOrderUrl(item.code, item.name, 1, item.price);
+      item.waUrl = buildWaUrl(item.code, item.name, item.price);
       item.addToCart = () => this.addToCart(item);
     }));
 
@@ -722,11 +727,11 @@ class Component extends DCLogic {
     const cartTotal = this.fmtPrice(cartTotalNum);
     const cartHalfNum = cartTotalNum / 2;
     const cartHalf = this.fmtPrice(cartHalfNum);
-    const cartLines = cartItems.map(it => it.qty + "x " + it.name + " (" + this.fmtPrice(it.priceNum) + " cada)");
-    const cartSummary = cartLines.join(" | ");
-    const cartFormUrl = cartItems.length ? buildOrderUrl(cartSummary, "Total: " + cartTotal) : FORM_BASE;
+    const cartCodes = cartItems.map(it => it.code + " - " + it.name + " (x" + it.qty + ")").join(" | ");
+    const cartQtySummary = cartItems.map(it => it.qty + "x " + it.code).join(", ");
+    const cartFormUrl = cartItems.length ? buildOrderUrl("", cartCodes, cartQtySummary, cartTotal) : FORM_BASE;
     const cartWaText = "Olá! Gostaria de fazer um pedido com os seguintes itens:\n\n" +
-      cartItems.map(it => "• " + it.qty + "x " + it.name + " — " + this.fmtPrice(it.qty * it.priceNum)).join("\n") +
+      cartItems.map(it => "• " + it.code + " - " + it.qty + "x " + it.name + " — " + this.fmtPrice(it.qty * it.priceNum)).join("\n") +
       "\n\n*Total: " + cartTotal + "*\n*Sinal (50%): " + cartHalf + "*\n\nAguardo confirmação para enviar o PIX!";
     const cartWaUrl = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(cartWaText);
 
